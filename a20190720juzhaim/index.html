@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="gbk">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="robots" content="all">
+    <title>长按保存实例</title>
+    <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="ossweb-img/css/index.css">
+    <style>
+        .sec1 .btn .orderreward.open{
+            background-position: -2.95rem -4.2rem;
+        }
+    </style>
+    <script>
+        //需要插入在<head>标签内在所有脚本之前执行
+        (function (win) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+
+            function setFont() {
+                function setRem() {
+                    var cliWidth = html.clientWidth;
+                    var w = document.documentElement.clientWidth, h = document.documentElement.clientHeight;
+                    var val = 750;
+
+                    switch (window.orientation) {
+                        case 0:
+                            //刘海在上边
+                            // displayStr = "direction_por";
+                            break;
+                        case -90:
+                            //刘海在右边
+                            // displayStr = "direction_land_ops";
+                            val = 1334;
+                            break;
+                        case 90:
+                            //刘海在左边
+                            // displayStr = "direction_land";
+                            val = 1334;
+                            break;
+                        case 180:
+                            //刘海在下边
+                            // displayStr = "direction_por_ops";
+                            break;
+                        default:
+                            if (w > h) {
+                                val = 1334;
+                            }
+                    }
+                    html.style.fontSize = 100 * (cliWidth / val) + 'px';
+                }
+
+                setRem();
+                setTimeout(function () {
+                    setRem();
+                }, 300);
+            }
+
+            win.addEventListener('resize', setFont, false);
+            setFont();
+        })(window);
+    </script>
+</head>
+<body>
+<!--header start -->
+<header class="head">
+    <a href="//zhuoyao.qq.com/m/main.shtml" onclick="PTTSendClick('link','logo','logo');">
+        <img src="//game.gtimg.cn/images/gwgo/cp/a20190612xuyuanxing/logo.png" alt="logo">
+    </a>
+    <p>
+        <span>一起来捉妖</span><br>
+        腾讯首款AR探索手游
+    </p>
+    <a class="jrgw hd" href="//zhuoyao.qq.com/m/main.shtml" onclick="PTTSendClick('link','jrgw','进入主站');">进入主站</a>
+    <a class="jrlt hd" href="//zhuoyao.qq.com/zlkdatasys/mct/d/"
+       onclick="PTTSendClick('btn','ljxz','立即下载');">立即下载</a>
+</header>
+<!--header end -->
+<!--kv start -->
+<div class="kv">
+    <p class="hide">拒宅嘉年华，一起来捉妖</p>
+    <h1 class="hide">万人狂欢，首次集合</h1>
+    <a href="//zhuoyao.qq.com/cp/a20190723jzjnh/index.shtml" class="hd venue" onclick="PTTSendClick('link',' main_venue','主会场');">主会场</a>
+    <div id="ams_loginbar">
+        <div id="unlogin">
+            你好，请<a id="ptLoginBtn" href="javascript:;" style="cursor: pointer;" onclick="TGDialogS(load),PTTSendClick('btn','sign','登录');">[登录]</a>
+        </div>
+        <div id="logined" style="display: none;">
+            <span>欢迎您，</span>
+            <span id="nickName">-</span>
+        </div>
+    </div>
+    <div class="kv-btn">
+        <a href="#uder" class="hd spr understa"
+           onclick="PTTSendClick('btn','understa','了解拒宅嘉年华');">了解拒宅嘉年华</a>
+        <a href="javascript:;" class="hd spr appointment"
+           onclick="PTTSendClick('btn','appointment','抢先关注');">抢先关注</a>
+        <a href="javascript:;" class="hd spr check" onclick="PTTSendClick('btn','check','查看我的邀请函');">查看我的邀请函</a>
+    </div>
+    <div class="kv-message"></div>
+</div>
+<!--中间部分 start-->
+<main class="main">
+    <!--kv end -->
+    ·
+    <!--section1 start-->
+    <div class="sec1">
+        <h2 class="hd">领取预约奖励</h2>
+        <div class="cont">
+            <div class="rewards">
+                <div class="reward">
+                    <img src="ossweb-img/icon1.png" alt="奖励1">
+                    <p>关注好礼</p>
+                </div>
+                <div class="reward">
+                    <img src="ossweb-img/icon2.png" alt="奖励2">
+                    <p>关注好礼</p>
+                </div>
+                <div class="reward">
+                    <img src="ossweb-img/icon3.png" alt="奖励3">
+                    <p>绑定好礼</p>
+                    <span class="spr vip hd">绑定手机专享</span>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="javascript:;" class="hd spr orderreward" onclick="PTTSendClick('btn','orderreward','领取预约奖励');">领取预约奖励</a>
+                <a id="btn-to-bind" href="javascript:;" class="hd spr binding"
+                   onclick="PTTSendClick('btn','binding','立即绑定手机');">立即绑定手机</a>
+            </div>
+            <p class="explain"><strong>8月2日</strong>开启售票时可领取关注奖励</p>
+            <div class="rules">
+                <h3>活动规则</h3>
+                <ul>
+                    <li>1. 本预热活动时间为2019年7月31日至2019年8月2日10:00结束。</li>
+                    <li>2. 于预热活动期间内在本页面登录并关注成功即可在售票开启后领取关注礼包一份，绑定手机可领取额外礼包一份。所有礼包每个用户限领取一次。</li>
+                    <li>3. 本活动内所有礼包均将在领取后3个工作日内发放至玩家绑定的游戏内角色邮箱。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--section1 end-->
+    <!--section2 start-->
+    <div class="sec2">
+        <h2 class="hd">六大亮点</h2>
+        <div class="cont">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="ossweb-img/swp1.jpg" alt="妖王降临">
+                        <div class="introduce">
+                            <h4>妖王降临，4大世界BOSS全聚首</h4>
+                            <p>妖王降临，<b>黑山公子</b>携一众世界BOSS全数出动，等你来战！只要你够幸运，甚至能遇到首次现身的<b>亮彩句芒</b>！</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ossweb-img/swp2.jpg" alt="如愿以偿">
+                        <div class="introduce">
+                            <h4>如愿以偿，稀有妖灵一次补齐</h4>
+                            <p>拒宅日稀有妖灵、地域六宝、分支妖灵、巢穴妖灵、亮彩妖灵......错过的一次补齐！让你的收藏不再留空！</p>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ossweb-img/swp3.jpg" alt="概率提升">
+                        <div class="introduce">
+                            <h4>概率提升，高资妖灵捉不完</h4>
+                            <p>还在搜索如何捕捉高资妖灵？嘉年华现场高概率刷出高资质妖灵，让你尽情捕捉，轻松拥有高资质妖灵！</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ossweb-img/swp4.jpg" alt="集结狂欢">
+                        <div class="introduce">
+                            <h4>集结狂欢，7大互动等你探索</h4>
+                            <p>现场打造7大互动区，集结全国御灵师，一同体验独特有趣的互动游戏，参与体验可获得丰厚奖励！全场禁飞，拒宅狂欢，用游戏拥抱真实世界！</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ossweb-img/swp5.jpg" alt="双重礼包">
+                        <div class="introduce">
+                            <h4>双重礼包，定制周边引爆幸福值</h4>
+                            <p>除了精彩的线上线下游戏互动，更有丰厚的游戏大礼包及见年华现场限定周边伴手礼和更多礼品奖励，等待御灵师！</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="ossweb-img/swp6.jpg" alt="顶级体验">
+                        <div class="introduce">
+                            <h4>顶级体验，尽在世界级乐园</h4>
+                            <p>本次嘉年华落地世界级乐园----广州融创乐园，捉妖之余，御灵师们更可在6大主题园区内，体验多种新颖演艺项目和超级游乐设施！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev spr"></div>
+            <div class="swiper-button-next spr"></div>
+        </div>
+    </div>
+    <!--section2 end-->
+    <!--section3 start-->
+    <div class="sec3">
+        <div class="pig">
+            <span class="cloud hd">云</span>
+        </div>
+        <h2 class="">
+            <span class="hd">副标题</span>
+        </h2>
+        <div class="cont">
+            <div class="rewards">
+                <div class="reward">
+                    <img src="ossweb-img/icon4.png" alt="奖励1">
+                    <p>嘉年华限定头像框</p>
+                </div>
+                <div class="reward">
+                    <img src="ossweb-img/icon4.png" alt="奖励2">
+                    <p>嘉年华限定拖尾特效</p>
+                </div>
+                <div class="reward">
+                    <img src="ossweb-img/icon5.png" alt="奖励3">
+                    <p>小狐狸太空舱背包</p>
+                </div>
+            </div>
+            <div class="rewards">
+                <div class="reward">
+                    <img src="ossweb-img/icon6.png" alt="奖励1">
+                    <p>钻石、超级封妖灵珠</p>
+                </div>
+                <div class="reward">
+                    <img src="ossweb-img/icon7.png" alt="奖励2">
+                    <p>大喇叭、祈愿牌</p>
+                </div>
+                <div class="reward">
+                    <img src="ossweb-img/icon8.png" alt="奖励3">
+                    <p>猫屋、猫箱</p>
+                </div>
+            </div>
+            <div class="rules">
+                <h3>活动说明</h3>
+                <ul>
+                    <li>1. 门票购买开启时间为2019年8月2日10:00。</li>
+                    <li>2. 嘉年华门票为单日票，单日票价130元，为正式乐园门票<b>5折</b>，单日票仅可激活当天体验资格。</li>
+                    <li>3. 购买门票的用户可获得<b>5倍</b>门票价值纪念礼包，礼包将在检票现场发放，通过CDKEY兑换，由游戏内邮件发送给玩家角色。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--section3 end-->
+    <!--section4 start-->
+    <div class="sec4">
+        <h2 id="uder" class=" hd">活动详情</h2>
+        <img class="img-raius" src="ossweb-img/long1.jpg" alt="长图1">
+        <img src="ossweb-img/long2.jpg" alt="长图2">
+        <img src="ossweb-img/long3.jpg" alt="长图3">
+        <img src="ossweb-img/long4.jpg" alt="长图4">
+        <img src="ossweb-img/long5.jpg" alt="长图5">
+        <img src="ossweb-img/long6.jpg" alt="长图6">
+        <img src="ossweb-img/long7.jpg" alt="长图7">
+        <img src="ossweb-img/long8.jpg" alt="长图8">
+        <img src="ossweb-img/long9.jpg" alt="长图9">
+        <img src="ossweb-img/long10.jpg" alt="长图10">
+        <img src="ossweb-img/long11.jpg" alt="长图11">
+        <img src="ossweb-img/long12.jpg" alt="长图12">
+        <img src="ossweb-img/long13.jpg" alt="长图13">
+    </div>
+    <!--section4 end-->
+</main>
+<!--中间部分 end -->
+
+<!--邀请函 start-->
+<div class="invitation " style="display:none">
+    <div class="bg"></div>
+    <div class="share ">
+        <img class="share-bg" src="cross-domain/share.jpg" alt="分享背景">
+        <img class="badge" src="cross-domain/badge.png" alt="实体徽章">
+        <p class="message" ><span class="name">别泄露了仙气</span>成为第<span class="num">8888</span>名关注嘉年华的御灵师，在嘉年华现场将会有机会获得<label class="daname">专属嘉年华实体徽章！</label></p>
+    </div>
+    <div class="share-cont">
+        <img id="picture" src="" alt="分享图片">
+        <p class="changan">长按保存图片</p>
+        <a href="javascript:;" class="invite-btn hd spr" onclick="PTTSendClick('btn','invite-friend','邀请好友');">邀请好友</a>
+    </div>
+</div>
+<!--邀请函 end-->
+<!--弹出窗 start-->
+<!--登录弹窗 start-->
+<div class="dialog load" id="load" style="display:none">
+    <div class="dia-con">
+        <a href="javascript:;" class="hd spr qq qqLoginBtn" onclick="PTTSendClick('btn','qq','QQ登录');">QQ登录</a>
+        <a href="javascript:;" class="hd spr wx wxLoginBtn" onclick="PTTSendClick('btn','wx','微信');">微信</a>
+    </div>
+    <a class="dia-close hd spr" onclick="PTTSendClick('btn','close1','关闭1');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--登录弹窗 end-->
+<!--绑定手机弹窗 start-->
+<div class="dialog phone" id="phone" style="display:none">
+    <div class="dia-con">
+        <p>绑定手机号可在开启售票的第一时间收到短信提醒</p>
+        <div class=" phonenumber"><label>手机号</label><input type="tel" title="手机号码" id="phonenumber"><a
+          href="javascript:;" class="hd spr getnumber" onclick="PTTSendClick('btn','getnumber','获取验证码');"></a>
+        </div>
+        <div class=" number"><label>验证码</label><input type="number" title="验证码" id="number"></div>
+        <a id="bind" href="javascript:;"  class="hd spr binding" onclick="PTTSendClick('btn','binding1','立即绑定1');">立即绑定</a>
+    </div>
+    <a class="dia-close hd spr" onclick="PTTSendClick('btn','close2','关闭2');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--绑定手机弹窗 end-->
+
+<!--绑定角色弹窗 start-->
+<div class="dialog role" id="role" style="display:none">
+    <div class="dia-con">
+        <div style="display:none">
+            <label>平台</label>
+            <select id="areaContentId">
+                <option disabled selected>选择平台</option>
+            </select>
+        </div>
+        <div class="clear">
+            <label>平台</label>
+            <select id="platContentId">
+                <option disabled selected>选择平台</option>
+            </select>
+        </div>
+        <div class="clear">
+            <label>系统</label>
+            <select id="partitionContentId">
+                <option value="" style="display: none;" disabled selected	>选择系统</option>
+            </select>
+        </div>
+        <div class="clear">
+            <label>角色</label>
+            <select id="roleContentId">
+                <option value="" disabled selected	>选择角色</option>
+            </select>
+        </div>
+        <a id="confirmButtonId" href="javascript:;" class="hd spr binding" onclick="PTTSendClick('btn','binding2','立即绑定2');">立即绑定</a>
+    </div>
+    <a class="dia-close hd spr" onclick="PTTSendClick('btn','close3','关闭3');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--绑定角色弹窗 end-->
+
+<!--领取成功弹窗 start-->
+<div class="dialog success" id="success" style="display:none">
+    <div class="dia-con">
+        <p>奖励将通过游戏内邮件形式发放<br>
+            请注意查收哦~~</p>
+    </div>
+    <a class="dia-close hd spr"onclick="PTTSendClick('btn','close4','关闭4');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--领取成功弹窗 end-->
+<!--预约成功 start-->
+<div class="dialog reservation" id="reservation" style="display:none">
+    <div class="dia-con">
+    </div>
+    <a class="dia-close hd spr"onclick="PTTSendClick('btn','close4','关闭4');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--预约成功 end-->
+<!--绑定成功 start-->
+<div class="dialog binding" id="binding" style="display:none">
+    <div class="dia-con">
+    </div>
+    <a class="dia-close hd spr"onclick="PTTSendClick('btn','close4','关闭4');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--绑定成功 end-->
+<!--领取成功弹窗 start-->
+<div class="dialog tickets" id="tickets" style="display:none">
+    <div class="dia-con">
+        <a class="tik2 hd "onclick="PTTSendClick('btn','purchase-tickets2','购买8月17日门票');" href="javascript:;" >购买8月17日门票</a>
+        <a class="tik1 hd "onclick="PTTSendClick('btn','purchase-tickets1','购买8月18日门票');" href="javascript:;" >购买8月18日门票</a>
+    </div>
+    <a class="dia-close hd spr"onclick="PTTSendClick('btn','close4','关闭4');" href="javascript:showDialog.hide()" title="关闭">×</a>
+</div>
+<!--领取成功弹窗 end-->
+<!--分享弹窗 start-->
+<div class="fenxiang hide">
+    <div class="bg"></div>
+    <div class="jiantou"></div>
+</div>
+<!--分享弹窗 end-->
+
+<!--弹出窗 end-->
+</body>
+<script id="customerLandscape" src="js/rotate.js" isVertical = "1"></script>
+<script src="//ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script>
+<script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+<script src="//ossweb-img.qq.com/images/js/swiper/swiper-3.4.2.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/mobile_bundle/milo.js"></script>
+<script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script src="//ossweb-img.qq.com/images/ams/atm/reporting.js"></script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/snowfall.jquery.min.js"></script>
+<script src="js/html2canvas.min.js"></script>
+<script>
+    //此段代码不能放到外链JS中，
+    var setSite = { //设置网站属性
+        siteType: "a20190720juzhaim", //必填项:"os"代表是主站，如果不是，则填写actName例如a20160701xxx
+        pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+        pageName: "首页", //必填项:页面中文名
+        project: "base", //选填项:如果是主站模块则是必填;按照模块内容，填写固定的对应值;主站微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+        osact: "m" //选填项:默认是0。osact=0表示非主站专题；osact=pc表示pc主站/pc主站专题；osact=m表示移动主站/移动主站专题；osact=ingame表示微社区/微社区专题
+    };
+    if (typeof (pgvMain) == 'function') pgvMain();//千万不能忘记！
+
+    TGMobileShare({
+        shareTitle:'嘿~这有份你的嘉年华邀请函！', //不设置或设置为空时，页面有title，则调取title
+        shareDesc:'一起来捉妖首届线下拒宅嘉年华即将开启，一键关注就送限量礼包！', //不设置或设置为空时，页面有Description，则调取Description
+        shareImgUrl:'https:ossweb-img/shareicon.png', //分享图片尺寸200*200，且填写绝对路径
+        shareLink:'', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+        actName:'a20151127juzhaim' //点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+    });
+
+    var mySwiper = new Swiper('.swiper-container', {
+        // loop: true,
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+    })
+
+    /*丝带飘落*/
+    function snow() {
+        $(document).snowfall('clear');
+        $(document).snowfall({image: "ossweb-img/ribbon1.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 80,});
+        $(document).snowfall({image: "ossweb-img/ribbon2.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 19,});
+        $(document).snowfall({image: "ossweb-img/ribbon3.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 35,});
+        $(document).snowfall({image: "ossweb-img/ribbon4.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 32,});
+        $(document).snowfall({image: "ossweb-img/ribbon5.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 23,});
+        $(document).snowfall({image: "ossweb-img/ribbon6.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 60,});
+        $(document).snowfall({image: "ossweb-img/ribbon7.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 24,});
+        $(document).snowfall({image: "ossweb-img/ribbon8.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 26,});
+        $(document).snowfall({image: "ossweb-img/ribbon9.png", flakeCount: 2, minSpeed: 0.7, minSize: 8, maxSize: 55,});
+        $(document).snowfall({
+            image: "ossweb-img/ribbon10.png",
+            flakeCount: 2,
+            minSpeed: 0.7,
+            minSize: 8,
+            maxSize: 37,
+        });
+        $(document).snowfall({
+            image: "ossweb-img/ribbon11.png",
+            flakeCount: 2,
+            minSpeed: 0.7,
+            minSize: 8,
+            maxSize: 28,
+        });
+    }
+
+    snow();
+    var name = '别泄漏了仙气';//用户名
+    var num = '1321';//预约名次
+    var daname = '专属嘉年华实体徽章！';//徽章名称
+    var img_src = '//zhuoyao.qq.com/cp/a20190720juzhaim/cross-domain/badge.png';//徽章
+    //share(name,num,daname,img_src);
+    var hasShare = false;
+    function share(name,num,daname,img_src) {
+        if (hasShare) {
+            return false;
+        }
+        hasShare = true;
+        //添加进share里面准备绘画
+        $(".share .name").text(name);
+        $(".share .num").text(num);
+        $(".share .daname").text(daname);
+        $(".share .badge").attr("src",img_src);
+        $('.share').show();
+        save($('.share'));
+    };
+    // 绘画
+    function save(targetDom) {
+        var shareContent = targetDom[0];
+        var width = shareContent.offsetWidth;
+        var height = shareContent.offsetHeight;
+        var canvas = document.createElement("canvas");
+        var scale = 4;
+        canvas.width = width * scale;
+        canvas.height = height * scale;
+        canvas.getContext("2d").scale(scale, scale);
+        var opts = {
+            allowTaint: false,
+            scale: scale,
+            canvas: canvas,
+            logging: true,
+            width: width,
+            height: height,
+            useCORS: true
+        };
+        html2canvas($('.share'), opts).then(function (canvas) {
+            var src = canvas.toDataURL('image/jpeg');
+            $('#picture').attr('src', src);
+            $(".share").hide();
+            $("#picture").show();
+            $(".changan,.invite-btn").show();
+        });
+    }
+
+    function TGDialogS(e) {
+        // 利用milo库引入dialog组件
+        need("biz.dialog", function (Dialog) {
+            Dialog.show({
+                id: e,
+                bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+                opacity: 50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+            });
+        });
+    }
+
+    function closeDialog() {
+        // 利用milo库引入dialog组件
+        need("biz.dialog", function (Dialog) {
+            Dialog.hide();
+        });
+    }
+    /*小猪吐气*/
+    $(".pig").on("click",function () {
+        $(".cloud").addClass("on");
+    });
+    /*分享背景*/
+    $(".invitation .bg").on("click",function () {
+        $(this).parent().hide().find(".cont").show().next().css("opacity","1").parent().find("#picture").hide().parent().find(".share").find(".congratulations").remove();
+        $(".changan").hide();
+    });
+    /*分享*/
+    $(".invite-btn").on("click",function () {
+        // $(".invitation").hide();
+        $(".fenxiang").show();
+    });
+    $(".fenxiang .bg").on("click",function () {
+        $(this).parent().hide();
+    });
+    function change(dom){
+        $(dom).on("click",function () {
+            $(this).addClass("on");
+        })
+    };
+    // change(".orderreward");
+    // change(".binding");
+    /*抢先关注,查看邀请函弹出邀请函*/
+    // $(".appointment,.check").on("click",function () {
+    //     $(".invitation,.changan").show();
+    // })
+    // 渠道屏蔽
+    var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        $(".jrgw").hide();
+        $(".head").find("a").eq(0).attr("href","javascript:;");
+        $(".venue").attr("href","javascript:;");
+        $(".qq").hide();
+        $('.tik2').click(function(){
+            window.location.href = 'http://wx.sunacctg.com/wx/choose/ticket?idSpecialUrl=661c8078e9884a6d9af9f161d59f0d54&idCompany=GZ17D97FC80F706AE05319B4C70A7AA5';
+        });
+        $('.tik1').click(function(){
+            window.location.href = 'http://wx.sunacctg.com/wx/choose/ticket?idSpecialUrl=3950414b19894526bdab105ffc85ff47&idCompany=GZ17D97FC80F706AE05319B4C70A7AA5';
+        });
+    } else if (/qq\/(\/[\d\.]+)*/.test(ua) || /qzone\//.test(ua)) {
+        $(".jrgw").show();
+        $(".qq").show();
+        $('.tik2').click(function(){
+            window.location.href = 'http://wx.sunacctg.com/choose/ticket/special?idSpecialUrl=899c9de568b64bd79cf7fe70eb6db260&idCompany=GZ17D97FC80F706AE05319B4C70A7AA5';
+        });
+        $('.tik1').click(function(){
+            window.location.href = 'http://wx.sunacctg.com/choose/ticket/special?idSpecialUrl=8c12082c5128406ea7b4060854a7f2ca&idCompany=GZ17D97FC80F706AE05319B4C70A7AA5';
+        });
+    } else {
+        $('.appointment,.check,#btn-to-bind,.orderreward').click(function(){
+            TGDialogS('load');
+        });
+    }
+
+    $('.qqLoginBtn').click(function(){
+        window.location.href = 'mqqapi://forward/url?url_prefix=' + btoa('https://zhuoyao.qq.com/cp/a20190720juzhaim/index.html' + '?_wv=49957') + '&version=1&src_type=web';
+    });
+
+    $('.wxLoginBtn').click(function(){
+        window.location.href = 'https://game.weixin.qq.com/cgi-bin/comm/openlink?noticeid=90228987&appid=wx123790a68951765e&url=https%3A%2F%2Fzhuoyao.qq.com%2Fcp%2Fa20190720juzhaim%2Findex.html';
+    });
+
+
+</script>
+
+<script src="js/riz20190725.js"></script>
+<script src="js/main.js"></script>
+</html>
+
+
+<!-- #t6Hl8#6F1BAF9C213EC5747BAB1C5B2223B35E -->
