@@ -1,0 +1,284 @@
+body, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, p, form, header, section, article, footer {
+    margin: 0;
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+
+em, b {
+    font-style: normal
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+img {
+    border: 0
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    outline: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td, th, ul, ol {
+    padding: 0
+}
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.cont {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.hd {
+    display: block;
+    text-indent: -9999px;
+}
+
+body {
+    background: #EFEFEF;
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    line-height: 70px;
+}
+header .cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    background: url(../logo.png) no-repeat center/cover;
+    width: 93px;
+    height: 57px;
+}
+
+header .nav {
+    display: flex;
+    text-align: center;
+}
+
+header .nav li {
+    /*flex: 1;*/
+    font-size: 18px;
+    border-radius: 3px;
+    width: 150px;
+    user-select: none;
+    cursor: pointer;
+}
+
+header .nav li.on {
+    color: #fff;
+    background: #18b4ed;
+}
+
+/*左边 s*/
+main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+main .contLeft {
+    width: 850px;
+}
+
+main .contLeft .nav-swiper {
+    width: 100%;
+}
+main .contLeft .nav-swiper .swiper-slide {
+    position: relative;
+}
+main .contLeft .nav-swiper img {
+    width: 850px;
+    height: 500px;
+}
+main .contLeft .nav-swiper p {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.7;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+main .contLeft .hotsLists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 25px 0;
+}
+
+main .contLeft .hotsLists li {
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    width: 400px;
+    height: 135px;
+    font-size: 18px;
+    color: #000;
+    border-radius: 5px;
+}
+
+main .contLeft .hotsLists li .imgBox {
+    width: 125px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .contLeft .hotsLists li img {
+    width: 100%;
+    transition: all;
+}
+main .contLeft .hotsLists li img:hover {
+    transform: scale(1.1);
+}
+main .contLeft .hotsLists li .title {
+    display: block;
+    width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+main .nestLists {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .nestLists li {
+    width: 820px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 5px;
+}
+main .nestLists li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+}
+
+main .nestLists li h2 {
+    height: 30px;
+    border-left: solid 3px #18b4ed;
+    color: #18b4ed;
+    font-size: 24px;
+    vertical-align: bottom;
+    text-indent: 24px;
+    letter-spacing: 2px;
+}
+
+main .nestLists li .titleBox {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 10px auto 0;
+}
+
+main .nestLists li .imgBox {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .nestLists li .imgBox img {
+    width: 100%;
+    transition: all;
+}
+main .nestLists li .imgBox img:hover {
+    transform: scale(1.1);
+}
+main .nestLists li .articleTitle {
+    width: 560px;
+}
+
+main .nestLists li .introduction {
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    text-overflow:ellipsis;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+main .nestLists li .articleInfo {
+    display: flex;
+    padding: 45px 0 0 50px;
+    justify-content: flex-start;
+}
+
+main .nestLists li .articleInfo li {
+    position: relative;
+    padding-left: 20px;
+}
+
+main .nestLists li .articleInfo li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: url(../auicon.jpg) no-repeat 0 0/15px 107px;
+    width: 15px;
+    height: 15px;
+}
+main .nestLists li .articleInfo li.kind:before {
+    background: url(../auicon.jpg) no-repeat 0 -23px/15px 107px;
+}
+main .nestLists li .articleInfo li.time:before {
+    background: url(../auicon.jpg) no-repeat 0 -44px/15px 107px;
+}
+main .nestLists li .articleInfo li.watches:before {
+    background: url(../auicon.jpg) no-repeat 0 -64px/15px 107px;
+}
+/*左边 e*/
+
+/*右边 s*/
+main .contRight {
+    width: 320px;
+    background: #a72aa1;
+}
+/*右边 e*/
