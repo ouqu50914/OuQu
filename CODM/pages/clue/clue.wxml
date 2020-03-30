@@ -1,0 +1,89 @@
+<block>
+  <view class="wrap">
+    <view class="topbtns">
+      <view class="rules">
+        规则说明
+      </view>
+      <text class="ordernow">立即预约</text>
+    </view>
+    <view class="title1">线索簿</view>
+    <view class="bar">
+      <view class="color">color</view>
+    </view>
+
+
+    <view class="steps">
+      <view class="step {{ stepData[0].isActive ? 'active' : '' }}">
+        <view class="gift">
+          <image></image>
+        </view>
+        <text class="giftname">{{stepData[0].giftName}}</text>
+        <view class="checkcule">{{stepData[0].isActive ? check : checked}}</view>
+      </view>
+      <view class="step {{ stepData[1].isActive ? 'active' : '' }}">
+        <view class="gift">
+          <image></image>
+        </view>
+        <text class="giftname">{{stepData[1].giftName}}</text>
+        <view class="checkcule">{{stepData[1].isActive ? check : checked}}</view>
+      </view>
+      <view class="step {{ stepData[2].isActive ? 'active' : '' }}">
+        <view class="gift">
+          <image></image>
+        </view>
+        <text class="giftname">{{stepData[2].giftName}}</text>
+        <view class="checkcule">{{stepData[2].isActive ? check : checked}}</view>
+      </view>
+      <view class="step {{ stepData[3].isActive ? 'active' : '' }}">
+        <view class="gift">
+          <image></image>
+        </view>
+        <text class="giftname">{{stepData[3].giftName}}</text>
+        <view class="checkcule">{{stepData[3].isActive ? check : checked}}</view>
+      </view>
+    </view>
+
+
+    <view class="bar bar2">
+      <view class="color color2">color</view>
+    </view>
+
+
+    <view class="videobox">
+      <view class="steps">
+        <view class="step step5 {{ stepData[4].isActive ? 'active' : '' }}">
+          <view class="gift">
+            <image></image>
+          </view>
+          <text class="giftname">{{stepData[4].giftName}}</text>
+          <view class="checkcule">待解锁花絮</view>
+        </view>
+      </view>
+      <view class="videoplay">
+        <view class="countdown">140:20:20</view>
+        <view class="title">后将解锁代言人花絮</view>
+        <view class="box">
+          <video src=""></video>
+          <image src="https://demo.17weiju.com/codm/a20200316misssta/img/videobg.png"></image>
+          <view class="play">play</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="barrage">
+      <view class="title">
+        已有
+        <view>1</view>
+        <view>2</view>
+        <view>3</view>
+        <view>4</view>
+        <view>5</view>
+        <view>6</view>
+        人参与竞猜
+      </view>
+      <view class="barragebox">
+        <view class="box"></view>
+      </view>
+    </view>
+  </view>
+</block>

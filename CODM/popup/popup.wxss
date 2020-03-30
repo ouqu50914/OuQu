@@ -1,0 +1,38 @@
+.popuplongbg {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.popupcont {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg1.png) no-repeat center/cover;
+    width: 659rpx;
+    height: 684rpx;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title {
+    font-size: 42rpx;
+    color: #fafafa;
+}
+
+.close {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -410rpx -640rpx/750rpx 750rpx;
+    width: 26rpx;
+    height: 26rpx;
+    position: absolute;
+    right: 15rpx;
+    top: 20rpx;
+    text-indent: -9999rpx;
+}

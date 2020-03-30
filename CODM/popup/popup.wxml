@@ -1,0 +1,7 @@
+<view class="popuplongbg popupshortbg popupmiddlebg" wx:if="{{isShow}}">
+  <view class="popupcont">
+    <view class="title">这里是标题</view>
+    <view class="close" bindtop="togglePoput()">close</view>
+    <slot></slot>
+  </view>
+</view>

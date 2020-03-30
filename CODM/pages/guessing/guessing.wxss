@@ -1,0 +1,299 @@
+.myguess {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 40rpx;
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/myguess.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 1290rpx;
+}
+.myguess .rules {
+    text-indent: -9999rpx;
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -460rpx -440rpx/750rpx 750rpx;
+    width: 95rpx;
+    height: 25rpx;
+    position: absolute;
+    left: 32rpx;
+    top: 75rpx;
+}
+.myguess .title {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 72rpx;
+    color: #080808;
+}
+
+.myguess .subtitle {
+    font-size: 24rpx;
+    color: #616161;
+    margin: 20rpx auto 30rpx;
+    font-weight: 600;
+}
+
+.myguess .sureguess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myguess .sureguess input {
+    border: solid 1rpx #bfbfbf;
+    background-color: rgb(218, 218, 218);
+    box-shadow: inset 0px 3rpx 8rpx 0rpx rgba(118, 118, 118, 0.57);
+    width: 376rpx;
+    height: 66rpx;
+    box-sizing: border-box;
+    padding-left: 32rpx;
+    margin-right: 25rpx;
+}
+.myguess .sureguess .sure{
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -280rpx -560rpx/750rpx 750rpx;
+    width: 201rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    color: #46390c;
+    font-weight: 600;
+}
+
+.myguess .who {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 42rpx;
+    color: #fdb113;
+    display: flex;
+    margin: 52rpx auto 32rpx;
+}
+.myguess .who view {
+    font-size: 40rpx;
+    color: #0b0b0b;
+    margin-left: 15rpx;
+    font-weight: 600;
+    font-family: MicrosoftYaHei;
+}
+
+.myguess .countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    color: #676767;
+}
+.myguess .allclues {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg9.png) no-repeat center/cover;
+    width: 688rpx;
+    height: 692rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 55rpx;
+    margin: 45rpx 0 0 0;
+}
+.myguess .allclues .title1 {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 36rpx;
+    color: #fff;
+    position: relative;
+}
+
+.myguess .allclues .title1:after {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -340rpx/750rpx 750rpx;
+    content: '';
+    width: 529rpx;
+    height: 1px;
+    position: absolute;
+    left: -190rpx;
+    bottom: -20rpx;
+    margin: auto;
+}
+.myguess .allclues .lists {
+    height: 400rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24rpx;
+    margin: 50rpx auto 40rpx;
+}
+.myguess .allclues .list {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -480rpx/750rpx 750rpx;
+    width: 621rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 82rpx;
+}
+
+.myguess .allclues .list text.under {
+    text-decoration: underline;
+}
+
+.myguess .allclues .list text:first-child{
+    font-family: BigruixianBlackGBV1.0;
+    margin-right: 45rpx;
+}
+.myguess .allclues .checkall {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -560rpx/750rpx 750rpx;
+    width: 257rpx;
+    height: 66rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    color: #45250d;
+    font-weight: 600;
+}
+
+.teammass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/teammass.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 1611rpx;
+    margin-bottom: 125rpx;
+}
+
+.teammass .title {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 60rpx;
+    color: #060606;
+}
+.teammass .subtitle {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 22rpx;
+    color: #626262;
+    box-shadow: 0px 1px 1px 0px
+    rgba(255, 197, 41, 0.14);
+    margin: 30rpx auto;
+}
+
+.teammass .teamname {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -360rpx/750rpx 750rpx;
+    width: 436rpx;
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 50rpx;
+    font-style: italic;
+    color: #fff;
+    padding-bottom: 25rpx;
+    box-sizing: border-box;
+}
+.teammass .invitebox {
+    width: 610rpx;
+    height: 420rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: relative;
+    margin: 40rpx auto;
+}
+.teammass .invitebox view {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/invite.png) no-repeat center/cover;
+    width: 155rpx;
+    height: 180rpx;
+}
+.teammass .invitebox view:first-child {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: scale(1.5);
+}
+.teammass .invitebox view:nth-of-type(even) {
+    margin-right: 100rpx;
+}
+.teammass .invitebox view:nth-of-type(4),.teammass .invitebox view:nth-of-type(5) {
+    align-self: flex-end;
+}
+.teammass .recruit{
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -460rpx -360rpx/750rpx 750rpx;
+    width: 230rpx;
+    height: 67rpx;
+    font-size: 26rpx;
+    color: #45250d;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.teammass .many {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 30rpx;
+    color: #cd8d07;
+    margin: 25rpx auto 30rpx;
+}
+
+.teammass .tips {
+    font-size: 18rpx;
+    color: #686868;
+    width: 83%;
+    text-align: center;
+}
+
+.teammass .gifttitle {
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 30rpx;
+    color: #242424;
+    margin: 85rpx auto 40rpx;
+    position: relative;
+}
+.teammass .gifttitle:before {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -330rpx/750rpx 750rpx;
+    width: 685rpx;
+    height: 3rpx;
+    position: absolute;
+    left: -255rpx;
+    top: -35rpx;
+    content: '';
+}
+.teammass .giftbox {
+    width: 690rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-family: BigruixianBlackGBV1.0;
+    font-size: 18rpx;
+    color: #2a2a2a;
+    margin-bottom: 50rpx;
+}
+.teammass .giftbox .giftsingle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.teammass .giftbox .giftbg {
+    margin-bottom: .25rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/no2.png) no-repeat center/cover;
+    width: 185rpx;
+    height: 251rpx;
+}
+.teammass .giftbox .giftbg.no1 {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/no1.png) no-repeat center/cover;
+    width: 239rpx;
+    height: 317rpx;
+}
+.teammass .giftbox .giftbg.no3 {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/no3.png) no-repeat center/cover;
+    width: 187rpx;
+    height: 257rpx;
+}

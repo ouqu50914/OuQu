@@ -1,0 +1,29 @@
+<block>
+  <view class="wrap">
+    <text class="title">每日任务</text>
+    <text class="subtitle">完成每日任务可额外获得一条代言人线索；</text>
+    <view class="taskbox">
+      <view class="list" wx:for="{{dateData}}" wx:key="index">
+        <view class="number">{{item.taskNum}}</view>
+        <view class="bg">
+          <text class="taskname">{{item.taskName}}({{item.taskRate}}/{{item.taskTotal}})</text>
+          <text class="taskgift">{{item.taskGift}}</text>
+        </view>
+        <view class="btn">{{item.taskBtn}}</view>
+      </view>
+    </view>
+    <text class="title">金币任务</text>
+    <text class="subtitle">完成金币任务可获得金币200，游戏上线后可登录领取；</text>
+    <view class="taskbox">
+      <view class="list" wx:for="{{coinData}}" wx:key="index">
+        <view class="number">{{item.taskNum}}</view>
+        <view class="bg">
+          <text class="taskname">{{item.taskName}}({{item.taskRate}}/{{item.taskTotal}})</text>
+          <text class="taskgift">{{item.taskGift}}</text>
+        </view>
+        <view class="btn">{{item.taskBtn}}</view>
+      </view>
+    </view>
+  </view>
+  <popup></popup>
+</block>

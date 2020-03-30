@@ -1,0 +1,69 @@
+<block>
+  <view class="myguess">
+    <view class="rules">规则说明</view>
+    <text class="title">我的猜想</text>
+    <text class="subtitle">倒计时结束前，玩家可随意修改竞猜答案</text>
+    <view class="sureguess">
+      <input type="text" placeholder="输入你的猜想"/>
+      <view class="sure">确定</view>
+    </view>
+    <view class="who">
+      当前的猜想:<view>某某某</view>
+    </view>
+    <view class="countdown">
+      竞猜结束倒计时：<view>140:23:22</view>
+    </view>
+    <view class="allclues">
+      <view class="title1">最新线索</view>
+      <view class="lists">
+        <view class="list"  wx:for="{{listData}}" wx:key="index">
+          <text>{{item.clueName}}</text>
+          <text class="{{ item.jump ? 'under' : '' }}">{{item.clueCont}}</text>
+        </view>
+      </view>
+      <view class="checkall">查看全部线索</view>
+    </view>
+  </view>
+  <view class="teammass">
+    <view class="title">战队预集结</view>
+    <view class="subtitle">抢先创建战队，囤积应援劵</view>
+    <view class="teamname">猛虎突袭队</view>
+    <view class="invitebox">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+    <view class="recruit">招募队友</view>
+    <view class="many">
+      已邀请
+      <text>1</text>
+      名队员
+    </view>
+    <view class="tips">*战队集结完毕之后，每位队员分别获得10应援券在下期活动为代言人应援，
+      有机会获得应援礼包</view>
+    <view class="gifttitle">应援礼包预告</view>
+    <view class="giftbox">
+      <view class="giftsingle">
+        <view class="giftbg no2">
+          <image></image>
+        </view>
+        <text>代言人奖励</text>
+      </view>
+      <view class="giftsingle">
+        <view class="giftbg no1">
+          <image></image>
+        </view>
+        <text>代言人奖励</text>
+      </view>
+      <view class="giftsingle">
+        <view class="giftbg no3">
+          <image></image>
+        </view>
+        <text>代言人奖励</text>
+      </view>
+    </view>
+    <text class="tips">*奖品将在下期活动结束后按照排名发放</text>
+  </view>
+</block>

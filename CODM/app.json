@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/task/task",
+    "pages/clue/clue",
+    "pages/guessing/guessing"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "使命召唤手游",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "backgroundColor": "#000",
+    "color": "#ffd400",
+    "selectedColor":"#000",
+    "custom":true,
+    "list":[
+            {
+              "pagePath": "pages/index/index",
+              "text": "首页"
+            },
+            {
+              "pagePath": "pages/clue/clue",
+              "text": "线索簿"
+            },
+            {
+              "pagePath": "pages/task/task",
+              "text": "任务清单"
+            },
+            {
+              "pagePath": "pages/guessing/guessing",
+              "text": "我的竞猜"
+            }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

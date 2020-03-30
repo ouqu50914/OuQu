@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <popup>
+    <view>测试一下呢</view>
+  </popup>
+</view>
