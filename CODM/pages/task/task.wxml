@@ -9,7 +9,7 @@
           <text class="taskname">{{item.taskName}}({{item.taskRate}}/{{item.taskTotal}})</text>
           <text class="taskgift">{{item.taskGift}}</text>
         </view>
-        <view class="btn">{{item.taskBtn}}</view>
+        <view class="btn" bindtouchstart="changNumber" bindtap="showDialog"  data-id="{{item.popupNumber}}">{{item.taskBtn}}</view>
       </view>
     </view>
     <text class="title">金币任务</text>
@@ -21,9 +21,12 @@
           <text class="taskname">{{item.taskName}}({{item.taskRate}}/{{item.taskTotal}})</text>
           <text class="taskgift">{{item.taskGift}}</text>
         </view>
-        <view class="btn">{{item.taskBtn}}</view>
+        <view class="btn" bindtouchstart="changNumber" bindtap="showDialog"  data-id="{{item.popupNumber}}">{{item.taskBtn}}</view>
       </view>
     </view>
   </view>
-  <popup></popup>
+  <dialog id='dialog'
+          bind:cancelEvent="_cancelEvent"
+          bind:confirmEvent="_confirmEvent">
+  </dialog>
 </block>

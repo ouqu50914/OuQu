@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "popup": "../../popup/popup"
+    "dialog": "../../components/Dialog"
   }
 }

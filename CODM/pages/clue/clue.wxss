@@ -123,7 +123,10 @@
     height: 136rpx;
     position: relative;
 }
-
+.steps .step .gift image {
+    width: 100%;
+    height: 100%;
+}
 .steps .step .gift:before {
     background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -640rpx/750rpx 750rpx;
     width: 54rpx;
@@ -233,7 +236,6 @@
     height: 253rpx;
     position: relative;
     left: -15rpx;
-    z-index: 9;
 }
 .videobox .videoplay .box:after {
     content: '';
@@ -243,6 +245,7 @@
     position: absolute;
     right: -70rpx;
     top: -80rpx;
+    z-index: 9;
 }
 .videobox .videoplay .box image {
     width: 382rpx;
@@ -337,4 +340,27 @@
     background: url(https://demo.17weiju.com/codm/a20200316misssta/img/dmbg.png) no-repeat center/cover;
     width: 609rpx;
     height: 342rpx;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 18rpx;
+}
+.barrage .barragebox .box view {
+    white-space: nowrap;
+}
+.barrage .barragebox .box text {
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-right: 35rpx;
+}
+
+@keyframes danmumove {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-500%);
+    }
 }

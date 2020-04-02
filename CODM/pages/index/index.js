@@ -7,14 +7,10 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    number:0
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -56,5 +52,36 @@ Page({
     this.getTabBar().setData({
       selected: 0
     })
+  },
+
+  changNumber:function (e) {
+    this.data.number = e.currentTarget.dataset.id;
+    console.log(this.data.number)
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    //获得dialog组件
+    this.dialog = this.selectComponent("#dialog");
+  },
+
+  showDialog(){
+    this.dialog.setData({
+      showNumber:this.data.number,
+    });
+    this.dialog.showDialog();
+  },
+
+  //取消事件
+  _cancelEvent(){
+    console.log('你点击了取消');
+    this.dialog.hideDialog();
+  },
+  //确认事件
+  _confirmEvent(){
+    console.log('你点击了确定');
+    this.dialog.hideDialog();
   }
 })

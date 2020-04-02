@@ -1,10 +1,14 @@
 <block>
+  <dialog id='dialog'
+          bind:cancelEvent="_cancelEvent"
+          bind:confirmEvent="_confirmEvent">
+  </dialog>
   <view class="wrap">
     <view class="topbtns">
       <view class="rules">
         规则说明
       </view>
-      <text class="ordernow">立即预约</text>
+      <text class="ordernow" bindtouchstart="changNumber" bindtap="showDialog"  data-id="2">立即预约</text>
     </view>
     <view class="title1">线索簿</view>
     <view class="bar">
@@ -14,28 +18,28 @@
 
     <view class="steps">
       <view class="step {{ stepData[0].isActive ? 'active' : '' }}">
-        <view class="gift">
+        <view class="gift"   bindtouchstart="changNumber" bindtap="showDialog"  data-id="4">
           <image></image>
         </view>
         <text class="giftname">{{stepData[0].giftName}}</text>
-        <view class="checkcule">{{stepData[0].isActive ? check : checked}}</view>
+        <view class="checkcule" bindtouchstart="changNumber" bindtap="showDialog"  data-id="3">{{stepData[0].isActive ? check : checked}}</view>
       </view>
       <view class="step {{ stepData[1].isActive ? 'active' : '' }}">
-        <view class="gift">
+        <view class="gift"   bindtouchstart="changNumber" bindtap="showDialog"  data-id="4">
           <image></image>
         </view>
         <text class="giftname">{{stepData[1].giftName}}</text>
-        <view class="checkcule">{{stepData[1].isActive ? check : checked}}</view>
+        <view class="checkcule"  bindtouchstart="changNumber" bindtap="showDialog"  data-id="5">{{stepData[1].isActive ? check : checked}}</view>
       </view>
       <view class="step {{ stepData[2].isActive ? 'active' : '' }}">
-        <view class="gift">
+        <view class="gift"  bindtouchstart="changNumber" bindtap="showDialog"  data-id="4">
           <image></image>
         </view>
         <text class="giftname">{{stepData[2].giftName}}</text>
         <view class="checkcule">{{stepData[2].isActive ? check : checked}}</view>
       </view>
       <view class="step {{ stepData[3].isActive ? 'active' : '' }}">
-        <view class="gift">
+        <view class="gift"  bindtouchstart="changNumber" bindtap="showDialog"  data-id="4">
           <image></image>
         </view>
         <text class="giftname">{{stepData[3].giftName}}</text>
@@ -52,7 +56,7 @@
     <view class="videobox">
       <view class="steps">
         <view class="step step5 {{ stepData[4].isActive ? 'active' : '' }}">
-          <view class="gift">
+          <view class="gift"  bindtouchstart="changNumber" bindtap="showDialog"  data-id="4">
             <image></image>
           </view>
           <text class="giftname">{{stepData[4].giftName}}</text>
@@ -60,12 +64,12 @@
         </view>
       </view>
       <view class="videoplay">
-        <view class="countdown">140:20:20</view>
+        <view class="countdown">{{hour}}:{{min}}:{{sec}}</view>
         <view class="title">后将解锁代言人花絮</view>
         <view class="box">
-          <video src=""></video>
-          <image src="https://demo.17weiju.com/codm/a20200316misssta/img/videobg.png"></image>
-          <view class="play">play</view>
+          <video id="videoplay" wx:if="{{isPlay}}" src="https://demo.17weiju.com/codm/a20200316misssta/img/bg-video.mpeg"  autoplay controls></video>
+          <image wx:if="{{!isPlay}}" src="https://demo.17weiju.com/codm/a20200316misssta/img/videobg.png"></image>
+          <view wx:if="{{!isPlay}}"  bindtap="videoPlay" class="play">play</view>
         </view>
       </view>
     </view>
@@ -82,7 +86,11 @@
         人参与竞猜
       </view>
       <view class="barragebox">
-        <view class="box"></view>
+        <view class="box">
+          <view  wx:for="{{ danmuList }}" wx:key="index" style="animation: danmumove {{ danmuTime[index] }}s linear infinite;">
+            <text wx:for="{{ item }}"  wx:key="index" style="color: {{ item.color }}">{{item.danmuWords}}</text>
+          </view>
+        </view>
       </view>
     </view>
   </view>

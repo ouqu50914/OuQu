@@ -1,0 +1,420 @@
+.wx_dialog_container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.wx-mask {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wx-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg11.png) no-repeat center/cover;
+    width: 688rpx;
+    height: 1042rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 55rpx;
+    z-index: 1001;
+}
+
+.close {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -410rpx -640rpx/750rpx 750rpx;
+    width: 26rpx;
+    height: 26rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 30rpx;
+    text-indent: -9999rpx;
+    z-index: 1002;
+}
+
+.wx-dialog-title {
+    font-family: BigruixianBlackGBV1 .0;
+    font-size: 48rpx;
+    color: #fff;
+}
+
+.wx-dialog-content {
+   display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25rpx 0;
+    position: relative;
+}
+.before,.after {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -320rpx/750rpx 750rpx;
+    width: 613rpx;
+    height: 1px;
+    content: '';
+    margin-bottom: 25rpx;
+}
+.after {
+    margin-top: 25rpx;
+}
+.list {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -480rpx/750rpx 750rpx;
+    width: 621rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 10rpx 0;
+    pointer-events: none;
+}
+
+.cluename {
+    flex: 3;
+}
+
+.cluecont {
+    flex: 7;
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
+    pointer-events: auto;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    margin-top: 35rpm;
+}
+
+.prev,.next {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -210rpx -250rpx/750rpx 750rpx;
+    width: 189rpx;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    color: #301d0a;
+    font-weight: bold;
+}
+
+.next {
+    background-position: 0 -250rpx;
+}
+
+
+.bindphone {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg8.png) no-repeat center/cover;
+    width: 662rpx;
+    height: 512rpx;
+}
+
+.bindphone .subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    color: #ffe73e;
+    margin: 30rpx auto;
+}
+
+.bindphone .gold {
+    color: #ffd400;
+    font-weight: bold;
+}
+
+.bind-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200rpx;
+}
+
+.bind-cont .after,.bind-cont .before {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -340rpx/750rpx 750rpx;
+    width: 529rpx;
+    height: 1px;
+}
+
+.bind-cont .bindlist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 430rpx;
+    text-align: left;
+}
+.bind-cont .bindlist .for {
+    font-size: 24rpx;
+    color: #fafafa;
+    font-weight: bold;
+    width: 140rpx;
+}
+.bind-cont .bindlist .input,.sametc1 .input{
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -700rpx/750rpx 750rpx;
+    width: 277rpx;
+    height: 30rpx;
+}
+
+.bind-cont .bindlist:nth-of-type(3) .input {
+    background-position: -460rpx -630rpx;
+    width: 161rpx;
+    height: 30rpx;
+}
+
+.bind-cont .bindlist input,.sametc1 .input input {
+    width: 100%;
+    height: 100%;
+    font-size: 18rpx;
+    min-height: 100% !important;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+
+}
+
+.bind-cont .bindlist .get {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -580rpx 0/750rpx 750rpx;
+    width: 102rpx;
+    height: 37rpx;
+    font-size: 18rpx;
+    color: #554011;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15rpx;
+}
+
+.bindphone .sure,.firstclue .share-friend,.sametc1 .share-friend{
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -460rpx -360rpx/750rpx 750rpx;
+    width: 230rpx;
+    height: 67rpx;
+    font-size: 36rpx;
+    letter-spacing: 2rpx;
+    color: #342908;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.firstclue {
+    background-image: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg6.png);
+    width: 662rpx;
+    height: 658rpx;
+}
+.firstclue .wx-dialog-title,.secondclue .wx-dialog-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstclue .clue {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -480rpx/750rpx 750rpx;
+    width: 621rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20rpx auto;
+}
+.firstclue .clue text{
+    font-size: 24rpx;
+    color: #0c0c0b;
+}
+.firstclue .clue text:first-child{
+    font-weight: bold;
+}
+
+.firstclue .guesstitle {
+    font-size: 24rpx;
+    color: #f5f5f5;
+}
+
+.firstclue .giftbox,.secondclue .giftbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20rpx auto 30rpx;
+    width: 75%;
+    position: relative;
+}
+.firstclue .giftbox .after {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -340rpx/750rpx 750rpx;
+    width: 529rpx;
+    height: 1px;
+    position: absolute;
+    bottom: -45rpx;
+    text-indent: -9999rpx;
+}
+.firstclue .giftbox .giftbg,.secondclue .giftbox .giftbg {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/giftbg.png) no-repeat center/cover;
+    width: 121rpx;
+    height: 136rpx;
+    margin-bottom: 10rpx;
+}
+
+.firstclue .giftbox  image,.secondclue .giftbox  image {
+    width: 100%;
+    height: 100%;
+}
+
+.firstclue .giftbox .giftname,.secondclue .giftbox .giftname {
+    font-size: 20rpx;
+    color: #fad62f;
+}
+
+.getsucess {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg5.png) no-repeat center/cover;
+    width: 547rpx;
+    height: 335rpx;
+}
+
+.getsucess .words {
+    font-size: 24rpx;
+    color: #fafafa;
+    margin: 35rpx auto 40rpx;
+}
+
+.getsucess .sure {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat -300rpx -685rpx/750rpx 750rpx;
+    width: 237rpx;
+    height: 61rpx;
+    font-size: 36rpx;
+    color: #030303;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondclue{
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg4.png) no-repeat center/cover;
+    width: 662rpx;
+    height: 965rpx;
+}
+.secondclue .clue {
+    width: 460rpx;
+    height: 297rpx;
+    background-color: #9f9f9f;
+    position: relative;
+    margin-top: 70rpx;
+}
+.secondclue .clue:before {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -340rpx/750rpx 750rpx;
+    width: 529rpx;
+    height: 1px;
+    position: absolute;
+    top: -35rpx;
+    left: -35rpx;
+    text-indent: -9999rpx;
+    content: '';
+}
+.secondclue .clue image {
+    width: 100%;
+    height: 100%;
+}
+
+.secondclue .goto-guess,.sametc2 .goto-guess {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -560rpx/750rpx 750rpx;
+    width: 257rpx;
+    height: 66rpx;
+    font-size: 36rpx;
+    color: #060606;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sametc1 {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg2.png) no-repeat center/cover;
+    width: 659rpx;
+    height: 404rpx;
+}
+
+.sametc1 .input {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/justliwai.png) no-repeat center/cover;
+    width: 370rpx;
+    height: 48rpx;
+    margin: 35rpx auto 10rpx;
+}
+.sametc1 .tips{
+    font-size: 24rpx;
+    color: #fafafa;
+    margin-bottom: 30rpx;
+}
+
+.sametc1 .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    line-height: 1.5;
+    color: #fafafa;
+    margin: 40rpx auto;
+}
+
+.sametc2 {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/tcbg3.png) no-repeat center/cover;
+    width: 659rpx;
+    height: 683rpx;
+}
+
+.sametc2 .wx-dialog-title {
+    position: relative;
+}
+.sametc2 .wx-dialog-title:before {
+    background: url(https://demo.17weiju.com/codm/a20200316misssta/img/sprite.png) no-repeat 0 -340rpx/750rpx 750rpx;
+    width: 529rpx;
+    height: 1px;
+    position: absolute;
+    bottom: -35rpx;
+    left: -165rpx;
+    text-indent: -9999rpx;
+    content: '';
+}
+
+.sametc2 image {
+    margin: 70rpx auto 55rpx;
+}
+
+.sametc2 .imgclue {
+    width: 484rpx;
+    height: 300rpx;
+    background-color: #9f9f9f;
+}
+.sametc2 .ecode {
+    width: 300rpx;
+    height: 300rpx;
+    background-color: #9f9f9f;
+}
+
+.sametc2 .tips{
+    font-size: 36rpx;
+    color: #fefefe;
+}

@@ -128,10 +128,12 @@
     align-items: center;
     box-sizing: border-box;
     padding-left: 82rpx;
+    pointer-events: none;
 }
 
 .myguess .allclues .list text.under {
     text-decoration: underline;
+    pointer-events: auto;
 }
 
 .myguess .allclues .list text:first-child{

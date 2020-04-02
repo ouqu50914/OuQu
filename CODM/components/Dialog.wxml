@@ -1,0 +1,175 @@
+<view class='wx_dialog_container' hidden="{{!isShow}}">
+  <view class='wx-mask'></view>
+  <view class='wx-dialog' wx:if="{{showNumber == 1}}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>最新线索</view>
+    <view class='wx-dialog-content'>
+      <view class="before">before</view>
+      <view class="list" wx:for="{{listData}}" wx:key="index">
+        <view class="cluename">{{item.clueName}}</view>
+        <view class=" cluecont {{ item.jump ? 'underline' : '' }}">{{ item.clueCont }}</view>
+      </view>
+      <view class="after">after</view>
+    </view>
+    <view class="btns">
+      <view class="prev">上一页</view>
+      <view class="next">下一页</view>
+    </view>
+  </view>
+
+
+  <!--  绑定手机号-->
+  <view class="wx-dialog bindphone" wx:if="{{ showNumber == 2 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>恭喜你，预约成功！</view>
+    <view class="subtitle">
+      <text>绑定手机信息，可获得：</text>
+      <text color="gold">金币200</text>
+    </view>
+    <view class="bind-cont">
+      <view class="before"></view>
+      <view class="bindlist">
+        <text class="for">手机号</text>
+        <view class="input">
+          <input type="tel" placeholder="请输入手机号"/>
+        </view>
+      </view>
+      <view class="bindlist">
+        <text class="for">验证码</text>
+        <view class="input">
+          <input type="tel" placeholder="请输入你的验证码"/>
+        </view>
+        <view class="get" bindtap="getCode" style="pointer-events: {{isGet}}">{{countDown}}</view>
+      </view>
+      <view class="bindlist">
+        <text class="for">好友邀请码</text>
+        <view class="input">
+          <input type="text" placeholder="非必填"/>
+        </view>
+      </view>
+      <view class="after"></view>
+    </view>
+    <view class="btns">
+      <view class="sure">确定</view>
+    </view>
+  </view>
+
+  <!--解锁代言人第一条线索-->
+  <view class="wx-dialog firstclue" wx:if="{{ showNumber == 3 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      <text>恭喜您 ！</text>
+      <text>解锁代言人第一条线索</text>
+    </view>
+    <view class="clue">
+      <text>{{listData[0].clueName}}</text>
+      <text class="{{ listData[0].jump ? 'on' :  ''}}">{{ listData[0].clueCont }}</text>
+    </view>
+    <text class="guesstitle">竞猜好礼</text>
+    <view class="giftbox">
+      <view class="giftlist" wx:for="{{ giftData }}" wx:key="index">
+        <view class="giftbg">
+          <image src="{{item.giftPath}}"></image>
+        </view>
+        <text class="giftname">{{ item.giftName }}</text>
+      </view>
+      <view class="after">after</view>
+    </view>
+    <view class="btns">
+      <view class="share-friend">分享好友</view>
+    </view>
+  </view>
+
+  <!--领取成功-->
+  <view class="wx-dialog getsucess" wx:if="{{ showNumber == 4 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      领取成功
+    </view>
+    <view class="words">
+      奖励名称X1
+    </view>
+    <view class="btns">
+      <view class="sure" catchtap="_cancelEvent">确定</view>
+    </view>
+  </view>
+
+  <!--解锁代言人第二条线索-->
+  <view class="wx-dialog secondclue" wx:if="{{ showNumber == 5 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      <text>恭喜您 ！</text>
+      <text>解锁代言人第二条线索</text>
+    </view>
+    <view class="clue">
+      <image></image>
+    </view>
+    <text class="guesstitle">竞猜好礼</text>
+    <view class="giftbox">
+      <view class="giftlist" wx:for="{{ giftData }}" wx:key="index">
+        <view class="giftbg">
+          <image src="{{item.giftPath}}"></image>
+        </view>
+        <text class="giftname">{{ item.giftName }}</text>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="goto-guess">前往竞猜</view>
+    </view>
+  </view>
+
+
+  <!--给自己的战队起个名字吧！-->
+  <view class="wx-dialog sametc1" wx:if="{{ showNumber == 6 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      给自己的战队起个名字吧！
+    </view>
+    <view class="input">
+      <input type="text"/>
+    </view>
+    <text class="tips">（限5个字）</text>
+    <view class="btns">
+      <view class="prev">确定</view>
+      <view class="next" catchtap="_cancelEvent">取消</view>
+    </view>
+  </view>
+
+  <!--恭喜你，战士！-->
+  <view class="wx-dialog sametc1" wx:if="{{ showNumber == 7 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      恭喜你，战士
+    </view>
+    <view class="cont">
+      <view><text>猛虎突袭队</text>已就位， 快去</view>
+      <view>邀请队员加入吧！</view>
+    </view>
+    <view class="btns">
+      <view class="share-friend">分享好友</view>
+    </view>
+  </view>
+
+  <!--查看线索-->
+  <view class="wx-dialog sametc2" wx:if="{{ showNumber == 8 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      查看线索
+    </view>
+    <image class="imgclue"></image>
+    <view class="btns">
+      <view class="goto-guess">前往竞猜</view>
+    </view>
+  </view>
+
+  <!--关注公众号-->
+  <view class="wx-dialog sametc2" wx:if="{{ showNumber == 9 }}">
+    <view class="close" catchtap="_cancelEvent">close</view>
+    <view class='wx-dialog-title'>
+      查看线索
+    </view>
+    <image class="ecode"></image>
+    <text class="tips">保存二维码关注公众号</text>
+  </view>
+</view>
+

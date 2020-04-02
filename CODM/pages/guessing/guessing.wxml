@@ -11,23 +11,23 @@
       当前的猜想:<view>某某某</view>
     </view>
     <view class="countdown">
-      竞猜结束倒计时：<view>140:23:22</view>
+      竞猜结束倒计时：<view>{{hour}}:{{min}}:{{sec}}</view>
     </view>
     <view class="allclues">
       <view class="title1">最新线索</view>
       <view class="lists">
         <view class="list"  wx:for="{{listData}}" wx:key="index">
           <text>{{item.clueName}}</text>
-          <text class="{{ item.jump ? 'under' : '' }}">{{item.clueCont}}</text>
+          <text class="{{ item.jump ? 'under' : '' }}"   bindtouchstart="changNumber" bindtap="showDialog"  data-id="8">{{item.clueCont}}</text>
         </view>
       </view>
-      <view class="checkall">查看全部线索</view>
+      <view class="checkall"  bindtouchstart="changNumber" bindtap="showDialog"  data-id="1">查看全部线索</view>
     </view>
   </view>
   <view class="teammass">
     <view class="title">战队预集结</view>
     <view class="subtitle">抢先创建战队，囤积应援劵</view>
-    <view class="teamname">猛虎突袭队</view>
+    <view class="teamname"   bindtouchstart="changNumber" bindtap="showDialog"  data-id="6">猛虎突袭队</view>
     <view class="invitebox">
       <view></view>
       <view></view>
@@ -66,4 +66,8 @@
     </view>
     <text class="tips">*奖品将在下期活动结束后按照排名发放</text>
   </view>
+  <dialog id='dialog'
+          bind:cancelEvent="_cancelEvent"
+          bind:confirmEvent="_confirmEvent">
+  </dialog>
 </block>

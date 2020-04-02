@@ -1,6 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <popup>
-    <view>测试一下呢</view>
-  </popup>
+    <dialog id='dialog'
+      bind:cancelEvent="_cancelEvent"
+      bind:confirmEvent="_confirmEvent">
+    </dialog>
+
+    <button type="primary" bindtouchstart="changNumber" bindtap="showDialog"  data-id="3"> ClickMe! </button>
 </view>
