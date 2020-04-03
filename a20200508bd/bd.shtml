@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!--#include virtual="/public/meta_seo.html" -->
+  <title>周年庆-<!--#include virtual="/public/site_title.html" --></title>
+  <link href="/css/public.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper2_component/swiper2.min.css">
+  <link rel="stylesheet" href="bd.css">
+</head>
+<body>
+<div class="bg">
+  <div class="bg1 hd">背景1</div>
+  <div class="bg2 hd">背景2</div>
+  <div class="bg3 hd">背景3</div>
+  <div class="bg4 hd">背景4</div>
+  <div class="bg5 hd">背景5</div>
+  <div class="bg6 hd">背景6</div>
+  <div class="bg7 hd">背景7</div>
+  <div class="bg8 hd">背景8</div>
+</div>
+<div class="wrap">
+  <div class="topbox clear">
+    <a href="javascript:;" class="hd logo" onclick="PTTSendClick('link','logo','logo');">logo</a>
+    <a href="javascript:;" class="hd aggregate" onclick="PTTSendClick('btn','aggregate','集合');">集合到我这里来</a>
+    <!--登录前状态 Start-->
+    <div id="unlogin" class="login" style="display: block;">
+      你好，请<a href="javascript:void(0)" onclick="PTTSendClick('btn','login','登录');" title="登录">登录</a>
+    </div>
+    <!--登录前状态 End-->
+    <!--登录后状态 Start-->
+    <div id="logined" class="login" style="display: none;  ">
+      欢迎您，<span id="login_qq_span"></span>
+      <span id="ams_user_headimg"></span>　
+      <a id="btn_logout" href="javascript:void(0)" onclick="PTTSendClick('btn','cancel','注销');" title="注销">注销</a>
+    </div>
+    <!--登录后状态 End-->
+  </div>
+  <h1 class="slogan">齐贺周年庆</h1>
+  <div class="sec1">
+    <h2 class="title" hd>品牌跨界嗨翻周年庆</h2>
+    <div class="sec1cont clear">
+      <ul class="newslist">
+<!--        <li>-->
+<!--          <a href="javascript:;"  onclick="PTTSendClick('link','detail1','详情页');">-->
+<!--            <span>品牌A与你</span>-->
+<!--            <p>玩转周年庆</p>-->
+<!--          </a>-->
+<!--        </li>-->
+        <li>
+          <a href="javascript:;"  onclick="PTTSendClick('link','detail2','详情页');">
+          <span>品牌A与你</span>
+            <p>玩转周年庆玩转周年庆玩转周年庆玩转周年庆玩转周年庆玩转周年庆玩转周年庆玩转周年庆玩转周年庆</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;"  onclick="PTTSendClick('link','detail3','详情页');">
+            <span>品牌A与你品牌A与你品牌A与你品牌A与你品牌A与你品牌A与你品牌A与你品牌A与你品牌A与你</span>
+            <p>玩转周年庆</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;"  onclick="PTTSendClick('link','detail4','详情页');">
+            <span>品牌A与你</span>
+            <p>玩转周年庆</p>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;"  onclick="PTTSendClick('link','detail5','详情页');">
+            <span>品牌A与你</span>
+            <p>玩转周年庆</p>
+          </a>
+        </li>
+      </ul>
+      <div class="sec1img">
+        <div class="swiper-container swiper1">
+          <div class="swiper-wrapper">
+<!--            <div class="swiper-slide">-->
+<!--              <a href="javascript:;"  onclick="PTTSendClick('link','imgdetail1','图片详情');">-->
+<!--              <img src="ossweb-img/swiper1img.jpg" alt="图片" width="759" height="423">-->
+<!--              </a>-->
+<!--            </div>-->
+            <div class="swiper-slide">
+              <a href="javascript:;"  onclick="PTTSendClick('link','imgdetail2','图片详情');">
+                <img src="ossweb-img/swiper1img.jpg" alt="图片" width="759" height="423">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:;"  onclick="PTTSendClick('link','imgdetail3','图片详情');">
+                <img src="ossweb-img/swiper1img.jpg" alt="图片" width="759" height="423">
+              </a>
+            </div>
+          </div>
+          <div class="pagination"></div>
+        </div>
+        <p class="tips">点击图片了解更多</p>
+      </div>
+    </div>
+  </div>
+  <div class="sec2">
+    <h2 class="title hd">来抽共享生日豪礼</h2>
+    <div class="sec2cont">
+      <a href="javascript:;" class="rules" onclick="PTTSendClick('btn','rules','活动规则');">活动规则</a>
+      <ul class="clear lottery">
+        <li class="">
+          <img src="ossweb-img/iphone11.png" width="111" height="153" alt="iPhone11">
+          <span class="lottertname">iPhone 11 Pro Max</span>
+        </li>
+
+        <li class="">
+          <img src="ossweb-img/pentu.png" width="73" height="73" alt="周年庆喷涂">
+          <span class="lottertname">周年庆喷涂</span>
+        </li>
+        <li>
+          <img src="ossweb-img/switch.png" width="244" height="158" alt="Switch">
+          <span class="lottertname">Switch</span>
+        </li>
+        <li>
+          <img src="ossweb-img/gold.png" width="72" height="77" alt="金币*58">
+          <span class="lottertname">金币*58</span>
+        </li>
+        <li>
+          <img src="ossweb-img/airpords.png" width="68" height="85" alt="AirPods Pro">
+          <span class="lottertname">AirPods Pro</span>
+        </li>
+        <li>
+          <img src="ossweb-img/golds.png" width="104" height="60" alt="服饰币*18">
+          <span class="lottertname">服饰币*18</span>
+        </li>
+        <li>
+          <img src="ossweb-img/box.png" width="98" height="81" alt="周年庆宝箱">
+          <span class="lottertname">周年庆宝箱</span>
+        </li>
+        <li>
+          <img src="ossweb-img/gold2.png" width="100" height="70" alt="金币*188">
+          <span class="lottertname">金币*188</span>
+        </li>
+        <li class="">
+          <img src="ossweb-img/golds.png" width="104" height="60" alt="服饰币*8">
+          <span class="lottertname">服饰币*8</span>
+        </li>
+      </ul>
+      <p class="tips">点击即可参与抽奖，分享页面可额外获得一次抽奖机会</p>
+      <a href="javascript:;" class="lucky hd" onclick="PTTSendClick('btn','lottery','点击抽奖');">点击抽奖</a>
+      <a href="javascript:;" class="check" onclick="PTTSendClick('btn','check','查看奖励');">查看奖励</a>
+    </div>
+  </div>
+</div>
+
+
+<!--#include virtual="/public/footer_act_pc.html"-->
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script>
+  //此段代码不能放到外链JS中，
+  var setSite = { //设置网站属性
+    siteType: "a20200508bd", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+    pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN,不支持点(.)、下划线(_)
+    pageName: "首页", //必填项:页面中文名
+    project: "base", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;官网微社区base;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;皮肤skin;默认other;
+    osact: "pc" //选填项:默认是0。osact=0表示非官网专题；osact=pc表示pc官网/pc官网专题；osact=m表示移动官网/移动官网专题；osact=ingame表示微社区/微社区专题
+  };
+  if (typeof (pgvMain) == 'function') pgvMain();//千万不能忘记！
+</script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/title.js"></script>
+<script src="//ossweb-img.qq.com/images/js/swiper2_component/swiper2.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination : '.pagination',
+    paginationClickable :true,
+    //其他设置
+  });
+  goLottery(8);
+  /*抽奖*/
+  function goLottery(num) {
+    var index = 0;
+    var lucky = 0;
+    var time = 100;
+    var text=  $(".lottery li").eq(num).find(".lottertname").text();
+    var timer = setInterval(
+    ()=>{
+      lucky += 1;
+      index+=1;
+
+      if (index > 8) {
+        index = 0;
+      };
+      $(".lottery").find("li").removeClass("on").eq(index).addClass("on");
+      if (lucky == 45 + num ) {
+        clearInterval(timer);
+        setTimeout(function () {
+          alert("恭喜您获得获得："+text);
+        },300)
+      };
+      console.log(time,lucky,index);
+    },time)
+  }
+</script>
+</body>
+</html>
