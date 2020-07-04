@@ -37,84 +37,84 @@
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:"9"
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:"5"
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:"1"
           },
           {
             headIcon:"cut.jpg",
             name:"别泄露了仙气",
-            time:20191230,
+            time:"1小时前",
             words:"先打一拳，打的时候再把问题问遍",
             goodNum:""
           }
@@ -129,7 +129,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #9c9999;
+    background: #F2F2F2;
   }
 
   h2 {
