@@ -396,6 +396,31 @@
         el: '.swiper-pagination',
       },
     })
+
+    function person() {
+      $.ajax({
+        type:"get",
+        url:"http://t1.3pts.cn/innerbuy/auth/check/myStore",
+        success:function (result) {
+          console.log(result)
+        }
+      })
+    }
+    load()
+    function load() {
+      $.ajax({
+        type: "post",
+        dataType:"jsonp",
+        url: "http://t1.3pts.cn/innerbuy/auth/login4Test",
+        success:function (data) {
+          console.log(data)
+        },
+        error:function (e) {
+          throw e
+        }
+      })
+    }
+
   </script>
 </body>
 
